@@ -8,10 +8,10 @@
 // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 // const firebaseConfig = {
 //   apiKey: "AIzaSyCZXipPZUtKgkDLg_--MegqvVfXF9G3eJQ",
-//   authDomain: "btm-webform.firebaseapp.com",
-//   databaseURL: "https://btm-webform-default-rtdb.firebaseio.com",
-//   projectId: "btm-webform",
-//   storageBucket: "btm-webform.appspot.com",
+//   authDomain: "btm-ghana-webform.firebaseapp.com",
+//   databaseURL: "https://btm-ghana-webform-default-rtdb.firebaseio.com",
+//   projectId: "btm-ghana-webform",
+//   storageBucket: "btm-ghana-webform.appspot.com",
 //   messagingSenderId: "588547210353",
 //   appId: "1:588547210353:web:f4fa396c6b6ea42a27efd0",
 //   measurementId: "G-8Q8XNVMYB3",
@@ -115,7 +115,7 @@ async function loadCountry() {
 let dataJson = {};
 
 async function httpRequest(url) {
-  //const response = fetch("https://btm-webform-default-rtdb.firebaseio.com",);
+  //const response = fetch("https://btm-ghana-webform-default-rtdb.firebaseio.com",);
   const response = await fetch(
     `https://btm-ghana-webform-default-rtdb.firebaseio.com/${url}.json`,
     {
