@@ -9,7 +9,7 @@
 // const firebaseConfig = {
 //   apiKey: "AIzaSyCZXipPZUtKgkDLg_--MegqvVfXF9G3eJQ",
 //   authDomain: "btm-webform.firebaseapp.com",
-//   databaseURL: "https://btm-webform-default-rtdb.firebaseio.com",
+//   databaseURL: "https://btm-ghana-webform-default-rtdb.firebaseio.com",
 //   projectId: "btm-webform",
 //   storageBucket: "btm-webform.appspot.com",
 //   messagingSenderId: "588547210353",
@@ -115,9 +115,9 @@ async function loadCountry() {
 let dataJson = {};
 
 async function httpRequest(url) {
-  //const response = fetch("https://btm-webform-default-rtdb.firebaseio.com",);
+  //const response = fetch("https://btm-ghana-webform-default-rtdb.firebaseio.com",);
   const response = await fetch(
-    `https://btm-webform-default-rtdb.firebaseio.com/${url}.json`,
+    `https://btm-ghana-webform-default-rtdb.firebaseio.com/${url}.json`,
     {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
@@ -145,7 +145,7 @@ async function updateImmigration() {
   let bodyInner = ``;
   let tableData = ``;
   const response = await fetch(
-    `https://btm-webform-default-rtdb.firebaseio.com/immigration.json`
+    `https://btm-ghana-webform-default-rtdb.firebaseio.com/immigration.json`
   );
   const result = await response.json();
   //console.log(result);

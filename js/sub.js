@@ -117,7 +117,7 @@ let dataJson = {};
 async function httpRequest(url) {
   //const response = fetch("https://btm-webform-default-rtdb.firebaseio.com",);
   const response = await fetch(
-    `https://btm-webform-default-rtdb.firebaseio.com/${url}.json`,
+    `https://btm-ghana-webform-default-rtdb.firebaseio.com/${url}.json`,
     {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
@@ -140,7 +140,7 @@ async function update() {
   let bodyInner = ``;
   let tableData = ``;
   const response = await fetch(
-    `https://btm-webform-default-rtdb.firebaseio.com/subcription.json`
+    `https://btm-ghana-webform-default-rtdb.firebaseio.com/subcription.json`
   );
   const result = await response.json();
   console.log(result);
