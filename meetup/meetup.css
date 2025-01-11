@@ -1,0 +1,279 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* html {
+  background-color: #fafafa;
+} */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+.up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 4rem;
+  border-bottom: 1px solid #00cbbf;
+  padding: 1rem 3rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.form_image {
+  margin-top: -5rem;
+  margin-bottom: -3rem;
+}
+.logo {
+  padding: 0.5rem;
+  width: 180px;
+  height: auto;
+}
+
+.menu_button {
+  position: absolute;
+  top: 50;
+  z-index: 100000;
+  right: 0;
+  padding-right: 1rem;
+}
+.register_button {
+  width: 9.5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 1.125rem;
+  background: #007f77;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  visibility: hidden;
+  display: none;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  min-width: 300px;
+  max-width: 700px;
+  padding: 0 3rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100000;
+}
+.calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.year {
+  color: #0d2e40;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem;
+}
+.month {
+  color: #0d2e40;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.meet {
+  color: #01377d;
+  font-family: Montserrat;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 95%;
+}
+
+.registration {
+  color: #00a69c;
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+input[type="email"],
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+  padding: 0.65rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #a8ddd7;
+
+  background-color: rgb(0 117 178 / 12%);
+  color: rgb(0 0 0 / 70%);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+label {
+  color: #1f3d83;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.sumBtm {
+  width: 9.5rem;
+  padding: 1rem 0.5rem;
+  border-radius: 1.125rem;
+  background: #007f77;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  border-style: none;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+.form {
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(28, 169, 75, 0.21);
+  background: #fff;
+  padding: 1.5rem 3rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  background-color: #fff;
+  z-index: 10000;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.pattern {
+  display: flex;
+}
+.footer {
+  position: relative;
+  margin-top: -10rem;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  height: 20rem;
+  z-index: -1000;
+  margin-bottom: -70%;
+  overflow: hidden;
+}
+.right {
+  margin-right: -6%;
+}
+.left {
+  margin-left: -20%;
+}
+.width {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  bottom: 3rem;
+}
+.r_img {
+  right: 1rem;
+  bottom: 5rem;
+}
+.l_img {
+  left: 0rem;
+  width: 130px;
+  bottom: 0;
+}
+.m_img {
+  right: 5rem;
+  width: 190px;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 35rem) {
+  header {
+    height: 5rem;
+    justify-content: space-between;
+  }
+  .menu_button {
+    display: none;
+  }
+  .sumBtm {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .register_button {
+    display: inline;
+    visibility: visible;
+  }
+  main {
+    margin-top: 3.5rem;
+  }
+  .width {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: 3rem;
+  }
+  .r_img {
+    right: 1rem;
+    width: 130px;
+    bottom: 5rem;
+  }
+  .l_img {
+    left: 0rem;
+    width: 130px;
+    bottom: 0;
+  }
+  .m_img {
+    left: 3rem;
+    width: 190px;
+    bottom: 0;
+  }
+  .left {
+    margin-left: -10%;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .left {
+    margin-left: -5%;
+  }
+  .right {
+    margin-right: -1%;
+  }
+}

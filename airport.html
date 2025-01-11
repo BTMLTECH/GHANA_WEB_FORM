@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Visa and Immigration Services" />
+    <meta name="author" content="Adekunle Adesoji" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://btmlimited.net/wp-content/uploads/2022/12/logo-transparent.png"
+        type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="stylesheet" href="css/medium.css" />
+    <link rel="stylesheet" href="css/large.css" />
+    <title>Nigeria's Leading Travel Management Company</title>
+</head>
+
+<body>
+    <!-- Banner -->
+    <aside id="banner">
+        <!-- banner text here -->
+        <p id="closeBanner">&times;</p>
+    </aside>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="https://btmlimited.net/wp-content/uploads/2022/12/logo-transparent.png" alt="logo"
+                class="logo_image" />
+
+        </div>
+
+        <!-- Navigation -->
+        <nav id="menu">
+            <div id="closeBtn">
+                &times;
+            </div>
+            <ul>
+                <li><a href="index.html">Visa and Immigration</a></li>
+                <li><a href="car.html">Car Hire Service</a></li>
+                <li class="active"><a href="airport.html">Airport Concierge</a></li>
+            </ul>
+        </nav>
+        <div id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <div id="summary">
+            <picture>
+                <!-- <source media="(max-width: 500px)" srcset="images/join-us.jpg" />
+        <source media="(max-width: 800px)" srcset="images/join-us.jpg" />
+        <source media="(max-width: 1024px)" srcset="images/join-us.jpg" /> -->
+                <img id="hero_image" src="./images/airporttt.png" alt="Franklin" />
+            </picture>
+            <h1>Nigeria's Leading Travel Management Company</h1>
+        </div>
+        <section id="contact">
+            <h1>Airport Concierge Services</h1>
+            <div>
+                <form style="width: 100%;" id='form'>
+                    <fieldset>
+                        <legend>BIO DATA</legend>
+                        <label class="top">
+                            Title
+                            <input type="text" name="Title" placeholder="Mr/Mrs/Miss/Other" required />
+                        </label>
+                        <label class="top">
+                            Name (as it appears on passport)
+                            <input type="text" name="Full_name" required />
+                        </label>
+                        <label class="top">
+                            Email
+                            <input type="email" name="Email" placeholder="username@domain.com" required />
+                        </label>
+                        <label class="top">
+                            Phone Number (Include Country code)
+                            <input type="tel" name="Phone_Number" required />
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Airport Concierge Services</legend>
+                        <label class="top">
+                            Select type of Flight
+                            <select name="type_of_flight" placeholder="Select type of Visa">
+                                <option selected disabled value="">Select type Flight ...</option>
+                                <option value="International">International</option>
+                                <option value="Domestic">Domestic</option>
+                            </select>
+                        </label>
+                        <label class="top">
+                            Select type of Meet and Greet
+                            <select name="type_of_Meet_and_Greet" placeholder="Select type of Visa">
+                                <option selected disabled value="">Select type of Meet and Greet ...</option>
+                                <option value="Standard Meet and Greet">Standard Meet and Greet</option>
+                                <option value="VIP Meet and Greet">VIP Meet and Greet</option>
+                            </select>
+                        </label>
+                        <label class="top">
+                            Number of Passengers
+                            <select name="Number_of_Passengers">
+                                <option selected disabled value="">Enter Number of Passengers</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10 or More">10 or More</option>
+                            </select>
+                        </label>
+                        <label class="top">
+                            Select Meet and Greet Description
+                            <select name="Meet_and_Greet_Description" placeholder="Select type of Visa">
+                                <option selected disabled value="">Select Description...
+                                </option>
+                                <option value="Arrival">Arrival</option>
+                                <option value="Departure">Departure</option>
+                                <option value="Both">Both</option>
+                            </select>
+                        </label>
+                        <label class="top">
+                            Departure Date
+                            <input type="date" required name="Departure_Date" />
+
+                        </label>
+                        <label class="top">
+                            Departure Airport
+                            <input type="text" name="Departure_Airport" required />
+                        </label>
+
+                        <label class="top">
+                            Arrival Date
+                            <input type="date" required name="Arrival_Date" />
+
+                        </label>
+                        <label class="top">
+                            Arrival Airport
+                            <input type="text" name="Arrival_Airport" required />
+                        </label>
+
+                        <label class="top">
+                            Select Trolley service
+                            <select name="Trolley_Service">
+                                <option value="Yes">Yes</option>
+                                <option selected value="No">No</option>
+                            </select>
+                        </label>
+
+                        <label class="top">
+                            Collect my boarding pass in advance (Applicable for flight within Nigeria only)
+                            <select name="Collect_my_boarding">
+                                <option value="Yes">Yes</option>
+                                <option selected value="No">No</option>
+                            </select>
+                        </label>
+
+                        <label class="top">
+                            Airport Lounge Access
+                            <select name="Airport_Lounge_Access" placeholder="Select type of Visa">
+                                <option selected disabled value="">Select type of Airport Lounge Access
+                                </option>
+                                <option value="Arrival">Arrival</option>
+                                <option value="Departure">Departure</option>
+                                <option value="Both">Both</option>
+                                <option value="none">None</option>
+                            </select>
+                        </label>
+                        <label class="top">
+                            BTM Discount / Voucher number
+                            <input type="text" name="BTM_Discount" placeholder="Please input Discount number" />
+                        </label>
+                        <label class="top">
+                            Additional or Special request
+                            <input type="text" name="Discount" placeholder="Please input special request" />
+                        </label>
+
+                        <div>
+                            How did you hear about <br />
+                            <input type="radio" id="contactChoice1" name="contact" value="email" />
+                            <label for="contactChoice1">Email</label><br>
+
+                            <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                            <label for="contactChoice2">Phone</label><br>
+
+                            <input type="radio" id="contactChoice3" name="contact" value="mail" />
+                            <label for="contactChoice3">Mail</label><br>
+                        </div>
+
+                    </fieldset>
+                    <center><input class="submitBtn" type="submit" value="Submit" /></center>
+                </form>
+
+            </div>
+
+        </section>
+        <section class="modal" id="modal">
+            <div>
+                <center>
+                    <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M29 0C45.0163 0 58 12.9837 58 29C58 45.0163 45.0163 58 29 58C12.9837 58 0 45.0163 0 29C0 12.9837 12.9837 0 29 0ZM29 5.8C16.187 5.8 5.8 16.187 5.8 29C5.8 41.813 16.187 52.2 29 52.2C41.813 52.2 52.2 41.813 52.2 29C52.2 16.187 41.813 5.8 29 5.8ZM45.2231 16.7145C46.4678 17.7225 46.6597 19.5486 45.6518 20.7933L29.2265 41.0768C28.7613 41.6513 28.1218 42.0015 27.4457 42.113L27.1051 42.1488C26.4206 42.1803 25.7222 41.9707 25.1478 41.5055L16.1329 34.2054C14.8882 33.1974 14.6962 31.3713 15.7042 30.1266C16.7121 28.8819 18.5382 28.69 19.7829 29.6979L26.5437 35.1712L41.1443 17.1432C42.1523 15.8985 43.9784 15.7066 45.2231 16.7145Z"
+                            fill="#65B02A" />
+                    </svg>
+                    <H2>
+                        Request Submitted
+                    </H2>
+                    <p>We have submitted your request and it is processing. We will notify you shortly</p>
+                    <button>Ok</button>
+                </center>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="about-us">
+                <img src="https://btmlimited.net/wp-content/uploads/2022/12/logo-transparent.png" alt="logo" />
+                <p>BTM is the acknowledged expert in the delivery of managed Travel Solutions, Aviation & Tourism
+                    Consultancy,
+                    Business
+                    Travel Consultancy. We are totally committed to a value offering for clients .</p>
+            </div>
+            <div>
+                <a href="//google.com">
+                    No. 45, <br> Oduduwa Way, GRA Ikeja, <br> Lagos, <br>Nigeria.
+                </a>
+            </div>
+            <div>
+                <a href="contact.html">Contact Us</a> <br>
+                <a href="tel:+016316100">016316100</a> <br>
+                <a href="mailto:holidays@btmlimited.net">holidays@btmlimited.net</a>
+            </div>
+            <div>
+                <h4>Follow us</h4>
+                <ul>
+                    <li><a href="//facebook.com/">FB</a></li>
+                    <li><a href="//twitter.com/">TW</a></li>
+                    <li><a href="//instagram.com/">INS</a></li>
+                    <li><a href="//linkedin.com/">LKD</a></li>
+                </ul>
+            </div>
+        </div>
+        <center class="copyright">
+            &copy; 2023 btmlimited
+            <p>Last modified <span id="currentDate">202x</span>&nbsp;</p>
+        </center>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="js/airport.js"></script>
+</body>
+
+</html>
