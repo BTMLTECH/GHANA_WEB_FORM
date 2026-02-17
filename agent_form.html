@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/small.css" />
@@ -27,11 +29,9 @@
     </aside>
     <!-- Header -->
     <header>
-        <!-- <div class="logo">
-            <img src="https://my.journeyeasy.net/static/media/logo.9394b24449dde045eb05.png" alt="logo"
-                class="logo_image" />
 
-        </div> -->
+
+        
         <div class="logo">
             <img src="https://raw.githubusercontent.com/BTMLTECH/logo/refs/heads/main/mdlogo.png" alt="logo"
                 class="logo_image" />
@@ -58,9 +58,7 @@
     <main>
         <div id="summary">
             <picture>
-                <!-- <source media="(max-width: 500px)" srcset="images/join-us.jpg" />
-        <source media="(max-width: 800px)" srcset="images/join-us.jpg" />
-        <source media="(max-width: 1024px)" srcset="images/join-us.jpg" /> -->
+
                 <img id="hero_image"
                     src="https://journeyeasy.onrender.com/static/media/landingImage.c21a2f71f5c744a8020a.png"
                     alt="Franklin" />
@@ -170,66 +168,93 @@
     </main>
 
     <footer>
-        <div class="top">
-            <div class="about-us">
-                <img src="https://raw.githubusercontent.com/BTMLTECH/logo/refs/heads/main/mdlogo.png" alt="logo" />
-                <p>BTM is the acknowledged expert in the delivery of managed Travel Solutions, Aviation & Tourism
-                    Consultancy,
-                    Business
-                    Travel Consultancy. We are totally committed to a value offering for clients .</p>
-            </div>
+    <div class="top">
+        <div class="about-us">
+            <img src="https://raw.githubusercontent.com/BTMLTECH/logo/refs/heads/main/mdlogo.png" alt="BTM Logo" />
+            <p>
+                BTM Limited is a leading provider of comprehensive Travel Management Solutions,
+                Aviation & Tourism Consultancy, and Corporate Travel Services.
+                We are committed to delivering value-driven, reliable, and professional travel
+                solutions tailored to meet the needs of our clients across Africa and beyond.
+            </p>
+        </div>
+
+        <!-- Nigeria Office -->
+        <div>
+            <strong>Nigeria Office</strong><br>
+            <a href="#">
+                No. 45,<br>
+                Oduduwa Way, GRA Ikeja,<br>
+                Lagos, Nigeria
+            </a>
+            <!-- Ghana Office -->
             <div>
-                <a href="//google.com">
-                    No. 45, <br> Oduduwa Way, GRA Ikeja, <br> Lagos, <br>Nigeria.
-                </a>
-            </div>
-            <div>
-                <a href="contact.html">Contact Us</a> <br>
-                <a href="tel:+2348129911897">+2348129911987</a> <br>
-                <a href="mailto:holidays@btmlimited.net">agency@btmlimited.net</a>
-            </div>
-            <div>
-                <h4>Follow us</h4>
-                <ul>
-                    <li><a href="//facebook.com/">FB</a></li>
-                    <li><a href="//twitter.com/">TW</a></li>
-                    <li><a href="//instagram.com/">INS</a></li>
-                    <li><a href="//linkedin.com/">LKD</a></li>
-                </ul>
+                <strong>Ghana Office</strong><br>
+                2nd Floor UMB Building<br>
+                6 HP Nyemitei Street,<br>
+                Oxford Street – Osu, Accra<br>
+                <br>
+                <strong>Tel:</strong> 
+                <a href="tel:+233598117590">0598117590</a> /
+                <a href="tel:+233302743234">0302743234</a><br>
+                <strong>Email:</strong> 
+                <a href="mailto:sales.gh@btmlimited.net">sales.gh@btmlimited.net</a>
             </div>
         </div>
-        <center class="copyright">
-            &copy; 2026 btmlimited
-            <p>Last modified <span id="currentDate">202x</span>&nbsp;</p>
-        </center>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+
+        <!-- General Contact -->
+        <div>
+            <a href="contact.html">Contact Us</a><br>
+            <a href="tel:+2348129911987">+2348129911987</a><br>
+            <a href="mailto:agency@btmlimited.net">agency@btmlimited.net</a>
+        </div>
+
+
+
+        
+        
+        <div class="subtop">
+
+            <div class="social-section center-social">
+            <h4>Follow Us</h4>
+            <ul class="social-links">
+                <li>
+                    <a href="//facebook.com/" class="social-icon facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="//twitter.com/" class="social-icon twitter" aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="//instagram.com/" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="//linkedin.com/" class="social-icon linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <center class="copyright">
+        &copy; 2026 BTM Limited. All rights reserved.
+        <p>Last modified <span id="currentDate"></span></p>
+    </center>
+</footer>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="js/sub.js"></script>
 
-    <!-- <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyCZXipPZUtKgkDLg_--MegqvVfXF9G3eJQ",
-      authDomain: "btm-webform.firebaseapp.com",
-      databaseURL: "https://btm-webform-default-rtdb.firebaseio.com",
-      projectId: "btm-webform",
-      storageBucket: "btm-webform.appspot.com",
-      messagingSenderId: "588547210353",
-      appId: "1:588547210353:web:f4fa396c6b6ea42a27efd0",
-      measurementId: "G-8Q8XNVMYB3"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script> -->
 </body>
 
 </html>
