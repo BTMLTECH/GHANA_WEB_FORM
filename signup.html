@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BTM Staff Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+    .card {
+      width: min(420px, 92vw);
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.25);
+    }
+    h2 { margin: 0 0 10px; color: #203a43; }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+    }
+    button {
+      background: #203a43;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:disabled { opacity: .7; }
+    .msg { margin-top: 12px; font-size: 13px; text-align: center; }
+    .error { color: #dc2626; }
+    .success { color: #16a34a; }
+  </style>
+</head>
+
+<body>
+<div class="card">
+  <h2>BTM Staff Signup</h2>
+
+  <input id="name" placeholder="Full name" />
+  <input id="email" type="email" placeholder="Email" />
+  <input id="password" type="password" placeholder="Password" />
+
+  <select id="role">
+    <option value="staff">Staff</option>
+    <option value="admin">Admin</option>
+  </select>
+
+  <button id="btn">Create Account</button>
+  <div id="msg" class="msg"></div>
+</div>
+
+<script>
+const DB = "https://btm-webform-default-rtdb.firebaseio.com";
+
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function emailExists(email) {
+  const res = await fetch(`${DB}/staffUsers.json`);
+  const users = await res.json();
+  if (!users) return false;
+  return Object.values(users).some(u => u.email === email);
+}
+
+document.getElementById("btn").onclick = async () => {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const role = document.getElementById("role").value;
+  const msg = document.getElementById("msg");
+  const btn = document.getElementById("btn");
+
+  msg.textContent = "";
+
+  if (!name || !email || !password) {
+    msg.textContent = "All fields are required.";
+    msg.className = "msg error";
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "Creating...";
+
+  if (await emailExists(email)) {
+    msg.textContent = "Email already exists.";
+    msg.className = "msg error";
+    btn.disabled = false;
+    btn.textContent = "Create Account";
+    return;
+  }
+
+  const hashedPassword = await hashPassword(password);
+
+  await fetch(`${DB}/staffUsers.json`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name,
+      email,
+      password: hashedPassword,
+      role,
+      createdAt: new Date().toISOString()
+    })
+  });
+
+  msg.textContent = "Account created successfully.";
+  msg.className = "msg success";
+  btn.disabled = false;
+  btn.textContent = "Create Account";
+};
+</script>
+</body>
+</html>

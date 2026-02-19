@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BTM Staff Login</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: Inter, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #fff;
+      padding: 30px;
+      width: 360px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.2);
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+    button {
+      background: #2c5364;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+<div class="card">
+  <h2>BTM Staff Login</h2>
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p id="error" style="color:red;"></p>
+</div>
+
+<script>
+const DB = "https://btm-webform-default-rtdb.firebaseio.com";
+
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map(b => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function login() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const error = document.getElementById("error");
+
+  const hashed = await hashPassword(password);
+
+  const res = await fetch(`${DB}/staffUsers.json`);
+  const users = await res.json();
+
+  for (const id in users) {
+    const u = users[id];
+    if (u.email === email && u.password === hashed) {
+      localStorage.setItem("btmUser", JSON.stringify({
+        name: u.name,
+        email: u.email,
+        role: u.role
+      }));
+      window.location.href = "dashboard.html";
+      return;
+    }
+  }
+
+  error.textContent = "Invalid email or password.";
+}
+</script>
+</body>
+</html>

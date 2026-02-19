@@ -95,7 +95,7 @@ currentDateSpan.textContent = new Intl.DateTimeFormat("en-GB", {
 async function loadCountry() {
   const country = await fetch("https://api.yeve.co.uk/country");
   const data = await country.json();
-  console.log(data);
+  // console.log(data);
   let elementOption = `<option selected disabled value="">Please enter Country name.</option>`;
   data.map((element) => {
     elementOption += `<option value=${element.name}>${element.name}</option>`;
@@ -108,7 +108,7 @@ async function loadCountry() {
   issued_by.innerHTML = elementOption;
   Country_of_Arrival.innerHTML = elementOption;
   Originating_country.innerHTML = elementOption;
-  console.log(Nationality);
+  // console.log(Nationality);
 }
 
 // declear json data variable.
@@ -148,7 +148,7 @@ async function updatecar() {
     `https://btm-webform-default-rtdb.firebaseio.com/car.json`
   );
   const result = await response.json();
-  console.log(result);
+  // console.log(result);
   for (const property in result) {
     const answer = result[property];
     tableData += `<tr id=${property} class=tablerow>
@@ -169,12 +169,12 @@ async function updatecar() {
                         <td id=${property}>${answer.Vehicle_Type}</td>
                     </tr>`;
   }
-  console.log(tableData);
+  // console.log(tableData);
   tableBody.innerHTML = tableData;
   document
     .querySelector(".tablerow")
     .addEventListener("click", async (event) => {
-      console.log(event);
+      // console.log(event);
     });
 }
 
@@ -193,10 +193,10 @@ form.addEventListener("submit", async (event) => {
   }
 
   const resquest = await httpRequest("car");
-  console.log("response", resquest);
+  // console.log("response", resquest);
   form.reset();
   //console.log(data.getAll());
-  console.log(dataJson);
+  // console.log(dataJson);
 });
 
 document.getElementById("modal").addEventListener("click", () => {

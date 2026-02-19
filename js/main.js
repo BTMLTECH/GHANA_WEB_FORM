@@ -95,7 +95,7 @@ currentDateSpan.textContent = new Intl.DateTimeFormat("en-GB", {
 async function loadCountry() {
   const country = await fetch("https://api.yeve.co.uk/country");
   const data = await country.json();
-  console.log(data);
+  // console.log(data);
   let elementOption = `<option selected disabled value="">Please enter Country name.</option>`;
   data.map((element) => {
     elementOption += `<option value=${element.name}>${element.name}</option>`;
@@ -108,7 +108,7 @@ async function loadCountry() {
   issued_by.innerHTML = elementOption;
   Country_of_Arrival.innerHTML = elementOption;
   Originating_country.innerHTML = elementOption;
-  console.log(Nationality);
+  // console.log(Nationality);
 }
 
 // declear json data variable.
@@ -166,12 +166,12 @@ async function updateImmigration() {
                         <td id=${property}>${answer.Country_of_Arrival}</td>
                     </tr>`;
   }
-  console.log(tableData);
+  // console.log(tableData);
   tableBody.innerHTML = tableData;
   document
     .querySelector(".tablerow")
     .addEventListener("click", async (event) => {
-      console.log(event);
+      // console.log(event);
     });
 }
 
